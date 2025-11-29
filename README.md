@@ -7,25 +7,17 @@ The setup is clean, minimal and focuses on a simple workflow.
 ✨ Features
 
 - Minimal design
-
 - Hyprland + Wayland focused
-
 - Easy to reuse on a new system
-
 - Lightweight and fast
-
 - No unnecessary dependencies
+- Many config uses jetbrains mono font: ttf-jetbrains-mono-nerd
 
 📂 Includes
 
 - ~/.config/hypr – Hyprland config
-
 - ~/.config/waybar – Waybar
-
 - ~/.config/dunst – Notifications
-
 - ~/.config/kitty – Terminal
-
 - ~/.config/wlogout – Logout menu
 
-Many config uses jetbrains mono font: ttf-jetbrains-mono-nerd
