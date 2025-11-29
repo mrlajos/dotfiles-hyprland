@@ -13,11 +13,6 @@ The setup is clean, minimal and focuses on a simple workflow.
 - No unnecessary dependencies
 - Many config uses jetbrains mono font: ttf-jetbrains-mono-nerd
 
-📂 Includes
-
-- ~/.config/hypr – Hyprland config
-- ~/.config/waybar – Waybar
-- ~/.config/dunst – Notifications
-- ~/.config/kitty – Terminal
-- ~/.config/wlogout – Logout menu
+After downloaded the repo use "restore-dotfiles.sh" to copy the files to their locations. When finished restart hyprland.
+If you modify config files and wish push it to github use "collect-dotfiles.sh" to copy all config files to ~/dotfiles.
 
