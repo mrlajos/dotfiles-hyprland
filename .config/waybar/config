@@ -1,0 +1,75 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock","custom/weather"],
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "bluetooth",
+    "cpu",
+    "memory",
+    "tray",
+    "custom/power"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5"
+    }
+  },
+
+  "clock": {
+    "format": "  {:%H:%M  %d.%m.%Y}",
+    "tooltip": false
+  },
+
+  "network": {
+    "format": "{ifname} ",
+    "format-disconnected": "⚠",
+    "tooltip": true
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": "",
+    "scroll-step": 5,
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol"
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-connected": ""
+  },
+
+  "battery": {
+    "format": "{capacity}% ",
+    "format-charging": "{capacity}% "
+  },
+
+  "cpu": { "format": " {usage}%" },
+  "memory": { "format": " {used}GB" },
+
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "wlogout --layout ~/.config/wlogout/layout --css ~/.config/wlogout/style.css"
+},
+
+"custom/weather": {
+  "exec": "~/.config/waybar/scripts/weather.sh",
+  "interval": 600,
+  "format": "{}"
+},
+
+  "tray": {
+    "spacing": 8
+  }
+}
