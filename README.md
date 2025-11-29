@@ -16,3 +16,7 @@ The setup is clean, minimal and focuses on a simple workflow.
 After downloaded the repo use "restore-dotfiles.sh" to copy the files to their locations. When finished restart hyprland.
 If you modify config files and wish push it to github use "collect-dotfiles.sh" to copy all config files to ~/dotfiles.
 
+## Preview
+
+![Hyprland desktop](screenshot/screenshot.png)
+
