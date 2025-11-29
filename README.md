@@ -27,3 +27,5 @@ The setup is clean, minimal and focuses on a simple workflow.
 - ~/.config/kitty – Terminal
 
 - ~/.config/wlogout – Logout menu
+
+Many config uses jetbrains mono font: ttf-jetbrains-mono-nerd
