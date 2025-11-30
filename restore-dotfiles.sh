@@ -18,7 +18,6 @@ ITEMS=(
   ".config/qt5ct"
   ".config/qt6ct"
   ".config/waybar"
-  ".config/wlogout"
   ".config/wofi"
 )
 

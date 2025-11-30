@@ -3,7 +3,7 @@
   "position": "top",
   "height": 30,
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock","custom/weather"],
+  "modules-center": ["clock"],
   "modules-right": [
     "network",
     "pulseaudio",
@@ -61,12 +61,6 @@
     "format": "",
     "tooltip": false,
     "on-click": "~/.config/waybar/scripts/power-menu.sh"
-},
-
-"custom/weather": {
-  "exec": "~/.config/waybar/scripts/weather.sh",
-  "interval": 900,
-  "format": "{}"
 },
 
   "tray": {
