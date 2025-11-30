@@ -27,6 +27,7 @@
 
   "clock": {
     "format": "  {:%H:%M  %d.%m.%Y}",
+    "on-click": "xdg-open https://calendar.google.com",
     "tooltip": false
   },
 

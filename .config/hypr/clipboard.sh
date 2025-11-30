@@ -1,4 +1,8 @@
-
 #!/usr/bin/env bash
 
-cliphist list | wofi --dmenu --prompt "Clipboard:" | cliphist decode | wl-copy
+cliphist list \
+  | wofi --dmenu \
+         --prompt "Search..." \
+         --style  ~/.config/wofi/clipboard.css \
+  | cliphist decode \
+  | wl-copy
