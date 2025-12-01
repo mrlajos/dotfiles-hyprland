@@ -28,13 +28,17 @@
   "clock": {
     "format": "  {:%H:%M  %d.%m.%Y}",
     "on-click": "xdg-open https://calendar.google.com",
-    "tooltip": false
+    "tooltip": true,
+    "tooltip-format": "Open Google Calendar"
   },
 
   "network": {
-    "format": "{ifname} ",
-    "format-disconnected": "⚠",
-    "tooltip": true
+  "tooltip": true,
+  "tooltip-format": "{ifname} {ipaddr}\nDown: {bandwidthDownBits}/s\nUp: {bandwidthUpBits}/s",
+  "format-wifi": "",
+  "format-ethernet": "",
+  "format-linked": " …",
+  "format-disconnected": ""
   },
 
   "pulseaudio": {
@@ -60,7 +64,8 @@
 
   "custom/power": {
     "format": "",
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "Power menu",
     "on-click": "~/.config/waybar/scripts/power-menu.sh"
 },
 
