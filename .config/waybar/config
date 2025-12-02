@@ -2,7 +2,7 @@
   "layer": "bottom",
   "position": "top",
   "height": 30,
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["custom/arch-menu","hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "network",
@@ -38,12 +38,15 @@
   "format-wifi": "",
   "format-ethernet": "",
   "format-linked": " …",
-  "format-disconnected": ""
+  "format-disconnected": "<span foreground='#ff5555'></span>",
+  "on-click": "kitty -e bash -ic 'nmtui; exec bash'"
   },
 
   "pulseaudio": {
-    "format": " {volume}%",
-    "format-muted": "",
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Volume: {volume}%",
+    "format-muted": "<span color='#ff5555'></span>",
     "scroll-step": 5,
     "on-click": "pamixer -t",
     "on-click-right": "pavucontrol"
@@ -60,14 +63,27 @@
   },
 
   "cpu": { "format": " {usage}%" },
-  "memory": { "format": " {used}GB" },
+  "memory": { 
+    "format": " {used}GB", 
+    "tooltip": true,
+    "tooltip-format": "{used}GB of {total}GB"
+  },
+
+  "custom/arch-menu": {
+  "format": " ",
+  "tooltip": true,
+  "tooltip-format": "Open App Search",
+  "on-click": "wofi --show drun --prompt \"Search\" --width 400 --allow-images --style ~/.config/wofi/menu.css",
+  "interval": 0,
+  "return-type": "string"
+  },
 
   "custom/power": {
     "format": "",
     "tooltip": true,
     "tooltip-format": "Power menu",
     "on-click": "~/.config/waybar/scripts/power-menu.sh"
-},
+  },
 
   "tray": {
     "spacing": 8

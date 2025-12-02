@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-  background-color: rgba(30, 30, 30, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #ffffff;
   border-bottom: 1px solid #444;
 }
@@ -23,13 +23,35 @@ window#waybar {
   color: white;
 }
 
+#network.wifi,
+#network.ethernet,
+#network.linked {
+  color: #ffffff;
+}
+
+#network.disconnected {
+  color: #c51a1a;
+}
+
 #custom-power {
   padding: 0 10px;
-  color: orange;
-  font-size: 18px;
+  color: #FFFFFF;
+  font-size: 20px;
 }
+
+#custom-arch-menu {
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+#custom-arch-menu:hover {
+  color: #1d72db;
+}
+
 #custom-power:hover {
-  color: red;
+  color: #c51a1a;
 }
 
 #custom-weather {
@@ -39,7 +61,7 @@ window#waybar {
 }
 
 #custom-weather.weather-error {
-    color: #ff5555;
+    color: #c51a1a;;
 }
 
 #clock,
