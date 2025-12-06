@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hyprland Keybindings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #000000;
+      --card: #0b1220;
+      --border: #1e293b;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --text-muted: #9ca3af;
+      --kbd-border: #1e293b;
+      --section-title: #f9fafb;
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);           /* simple solid background */
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+      padding-bottom: 12px;
+    }
+
+    header .title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--section-title);
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .tag {
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      color: #e0f2fe;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .tag-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2x2 cards */
+      gap: 18px;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 14px 14px 12px;
+    }
+
+    .section-header {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--section-title);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    /* Each row = 2 columns: keys | description */
+    li {
+      display: grid;
+      grid-template-columns: minmax(200px, 2fr) minmax(0, 2fr);
+      align-items: center;
+      column-gap: 14px;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .kbd-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    kbd {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 8px;
+      border-radius: 8px;
+      border: 1px solid var(--kbd-border);
+      background: #020617;
+      font-size: 0.78rem;
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+        Consolas, "Liberation Mono", "Courier New", monospace;
+      color: #e5e7eb;
+      white-space: nowrap;
+    }
+
+    .kbd-plus {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .section-label-bottom {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      opacity: 0.9;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px 10px;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      section {
+        padding: 12px 10px;
+      }
+      li {
+        grid-template-columns: 1fr;
+        row-gap: 2px;
+        align-items: flex-start;
+      }
+      .desc {
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="title-group">
+        <h1>Hyprland Keybindings</h1>
+        <div class="subtitle">
+          Quick reference for your current setup: windows, workspaces, apps, and system controls.
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- Windows & Layout -->
+      <section>
+        <div class="section-header">
+          <h2>Windows &amp; Layout</h2>
+        </div>
+        <ul>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>Q</kbd>
+            </div>
+            <div class="desc">Close active window</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>F11</kbd>
+            </div>
+            <div class="desc">Toggle fullscreen</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>SPACE</kbd>
+            </div>
+            <div class="desc">Toggle floating mode</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>Mouse Left</kbd>
+            </div>
+            <div class="desc">Move window</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>Mouse Right</kbd>
+            </div>
+            <div class="desc">Resize window</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span>
+              <kbd>← / → / ↑ / ↓</kbd>
+            </div>
+            <div class="desc">Change focus between windows</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Workspaces -->
+      <section>
+        <div class="section-header">
+          <h2>Workspaces</h2>
+        </div>
+        <ul>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>1..5</kbd>
+            </div>
+            <div class="desc">Switch to workspace 1–5</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>SHIFT</kbd>
+              <span class="kbd-plus">+</span><kbd>1..5</kbd>
+            </div>
+            <div class="desc">Move window to workspace 1–5</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>Mouse Scroll Up/Down</kbd>
+            </div>
+            <div class="desc">Scroll between workspaces</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Apps -->
+      <section>
+        <div class="section-header">
+          <h2>Apps</h2>
+        </div>
+        <ul>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>D</kbd>
+            </div>
+            <div class="desc">App search (wofi)</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>ENTER</kbd>
+            </div>
+            <div class="desc">Open terminal (kitty)</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>B</kbd>
+            </div>
+            <div class="desc">Open browser (firefox)</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>F</kbd>
+            </div>
+            <div class="desc">Open file manager (nemo)</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>V</kbd>
+            </div>
+            <div class="desc">Open clipboard history</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>PRINT</kbd>
+            </div>
+            <div class="desc">Take a screenshot (select region)</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- System -->
+      <section>
+        <div class="section-header">
+          <h2>System</h2>
+        </div>
+        <ul>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>L</kbd>
+            </div>
+            <div class="desc">Lock screen</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>P</kbd>
+            </div>
+            <div class="desc">Power menu</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>SHIFT</kbd>
+              <span class="kbd-plus">+</span><kbd>Q</kbd>
+            </div>
+            <div class="desc">Exit Hyprland</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>SHIFT</kbd>
+              <span class="kbd-plus">+</span><kbd>R</kbd>
+            </div>
+            <div class="desc">Restart Hyprland</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>SHIFT</kbd>
+              <span class="kbd-plus">+</span><kbd>W</kbd>
+            </div>
+            <div class="desc">Restart Waybar</div>
+          </li>
+          <li>
+            <div class="kbd-wrap">
+              <kbd>SUPER</kbd><span class="kbd-plus">+</span><kbd>F1</kbd>
+            </div>
+            <div class="desc">Show keybindings help</div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

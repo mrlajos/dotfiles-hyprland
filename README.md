@@ -9,6 +9,7 @@ The setup is clean, minimal and focuses on a simple workflow.
 
 - Minimal design, easy to reuse on a new system
 - [Hyprland](https://hypr.land/) + Wayland focused
+- Help page for keybindings. Press SUPER + F1 to open [help page](./.config/hypr/keybindings-help.html)
 - Terminal: [kitty](https://sw.kovidgoyal.net/kitty/overview/)
 - Clock: opens google calendar in your browser
 - Network icon: opens [nmtui](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/networking_guide/sec-configuring_ip_networking_with_nmtui)
