@@ -10,7 +10,7 @@
     notification_limit = 5
 
     ### Appearance
-    font = JetBrainsMono Nerd Font 9
+    font = JetBrainsMono 9
 
     # background of notification window
     background = "#1e1e2e"
@@ -58,18 +58,18 @@
 
 [urgency_low]
     background = "#000000ff"
-    foreground = "#a6adc8"
+    foreground = "#c0c0c0ff"
     frame_color = "#000000ff"
     timeout = 4
 
 [urgency_normal]
     background = "#000000ff"
-    foreground = "#c4cde9ff"
-    frame_color = "#6da0f3ff"
+    foreground = "#c0c0c0ff"
+    frame_color = "#498dfaff"
     timeout = 6
 
 [urgency_critical]
     background = "#000000ff"
-    foreground = "#f38ba8"
-    frame_color = "#e63668ff"
+    foreground = "#f3608aff"
+    frame_color = "#ec245dff"
     timeout = 0

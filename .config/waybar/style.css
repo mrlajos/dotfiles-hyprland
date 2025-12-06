@@ -1,42 +1,45 @@
 * {
   border: none;
-  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-family: "JetBrainsMono", monospace;
   font-size: 14px;
   min-height: 0;
 }
 
 window#waybar {
   background-color: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
+  color: #c4c4c4;
   border-bottom: 1px solid #444;
 }
 
 #workspaces button {
   padding: 4px 10px;
-  color: #aaa;
+  color: #c4c4c4;
   margin: 3px;
   border-radius: 8px;
 }
 
 #workspaces button.active {
-  background: #5e81ac;
+  background: #26619C;
   color: white;
 }
 
 #network.wifi,
 #network.ethernet,
 #network.linked {
-  color: #ffffff;
+  color: #c4c4c4;
 }
-
 #network.disconnected {
   color: #c51a1a;
 }
 
 #custom-power {
   padding: 0 10px;
-  color: #FFFFFF;
-  font-size: 20px;
+  color: #c4c4c4;
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 4px;
 }
 
 #custom-arch-menu {
@@ -44,33 +47,66 @@ window#waybar {
   font-size: 20px;
   font-weight: bold;
   border-radius: 8px;
+  color: #c4c4c4;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 4px;
 }
 
 #custom-arch-menu:hover {
-  color: #1d72db;
+  color: #ffffff;
 }
 
 #custom-power:hover {
   color: #c51a1a;
 }
 
-#custom-weather {
-    font-family: "JetBrainsMono Nerd Font", "JetBrainsMono NF", monospace;
-    padding: 0 4px;
-    font-size: 14px;
+#cpu {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-#custom-weather.weather-error {
-    color: #c51a1a;;
+#cpu.warning {
+  color: #f9a825;  
+}
+#cpu.critical {
+  color: #ff5555;
+}
+
+#memory.warning {
+  color: #f9a825;   
+}
+#memory.critical {
+  color: #ff5555; 
 }
 
 #clock,
-#network,
-#bluetooth,
-#pulseaudio,
+#network {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#bluetooth {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#pulseaudio {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 #battery,
-#cpu,
-#memory,
-#tray {
-  padding: 0 10px;
+#tray > .tray-item {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
