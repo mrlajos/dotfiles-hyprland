@@ -1,8 +1,8 @@
 window {
     margin: 0px;
     padding: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(30,30,30,1);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    background-color: rgb(90, 24, 32);
     border-radius: 14px;
     width: 320px;
     border: 0;

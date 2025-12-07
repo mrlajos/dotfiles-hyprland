@@ -1,8 +1,8 @@
 #!/bin/bash
 
-entries="  Power Off
-  Reboot
-  Lock"
+# Zero-width prefixes to control alphabetical order:
+# \u200b < \u200c < \u200d
+entries=$'\u200b  Lock\n\u200c  Reboot\n\u200d  Power Off'
 
 selected="$(printf '%s\n' "$entries" | wofi \
   --dmenu \
@@ -10,12 +10,12 @@ selected="$(printf '%s\n' "$entries" | wofi \
   --hide-search \
   --width 320 \
   --height 180 \
-  --config ~/.config/waybar/scripts/power-menu.conf \
   --style ~/.config/waybar/scripts/power-menu.css \
-  | awk '{print $NF}')"
+)"
 
-case $selected in
-  "Off") poweroff ;;
-  "Reboot") reboot ;;
-  "Lock") hyprlock ;;
+case "$selected" in
+  *Lock*)    hyprlock ;;
+  *Reboot*)  reboot ;;
+  *Power*)   poweroff ;;
 esac
+
