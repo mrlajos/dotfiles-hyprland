@@ -1,53 +1,65 @@
+/* === App Serch Menu Window === */
 
 window {
     margin: 0;
-    background-color: #1a1a1a;
-    border: 1px solid #FF7A00;
-    border-radius: 10px;
+    background-color: #0B1224;      
+    border: 1px solid #D46A00;      
+    border-radius: 12px;
 }
 
+/* search input */
 #input {
     margin: 10px;
-    padding: 8px;
-    background-color: #000000;
-    color: #FF7A00;
-    border: 1px solid #FF7A00;
-    border-radius: 5px;
+    padding: 10px 12px;
+    background-color: #070B16;      
+    color: #EAEFFF;                 
+    border: 1px solid #2B4C96;     
+    border-radius: 8px;
     font-size: 16px;
 }
 
 #input:focus {
-    border-color: #ff9e32;
+    border-color: #4F8CFF;         
+    box-shadow: 0 0 0 2px rgba(79, 140, 255, 0.25);
+}
+
+/* layout containers */
+#outer-box {
+    padding: 12px;
+    background-color: #0B1224;
 }
 
 #inner-box {
-    background-color: #1a1a1a;
-}
-
-#outer-box {
-    padding: 10px;
-    background-color: #1a1a1a;
+    background-color: #0B132A;
 }
 
 #scroll {
-    background-color: #1a1a1a;
+    background-color: #081022;
 }
 
-#img {
-    margin-right: 8px;
-}
-
+/* entries */
 #entry {
-    padding: 7px;
-    background-color: #1a1a1a;
-    color: white;
+    padding: 9px 10px;
+    margin: 4px 0;
+    background-color: #0E1A36;     
+    color: #EAEFFF;
+    border-radius: 10px;
 }
 
 #entry:selected {
-    background-color: #113b88;
-    color: black;
+    background-color: #1D4ED8;    
+    color: #eaecf1;                 
+}
+
+/* image + text */
+#img {
+    margin-right: 10px;
 }
 
 #text {
-    color: white;
+    color: #EAEFFF;
+}
+
+#entry:selected #text {
+    color: #eaecf1;
 }

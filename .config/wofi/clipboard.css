@@ -1,9 +1,13 @@
+/* === Clipboard History Window === */
+
+/* To show special characters: jetbrains mono and noto-fonts-emoji */
+
 window {
   margin: 80px;
   padding: 2px;
   border-radius: 0px;
-  border: 1px solid #e98d37;
-  background-color: #202020;
+  border: 1px solid #8B5CF6;      
+  background-color: #1A1824;
 }
 
 #outer-box {
@@ -19,19 +23,19 @@ window {
   margin: 8px;
   padding: 6px 10px;
   border-radius: 0px;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #0F0E17;
+  color: #EDE9FE;
+  border: 1px solid #6D28D9;
 }
 
 #entry {
   padding: 6px 10px;
-  color: #ffffff;
-  background-color: #1f1f1f;
+  color: #EDE9FE;
+  background-color: #1E1B2E;
 }
 
 #entry:selected {
-  background-color: #2e34ad;
-  padding: auto;
-  color: #ffffff;
-  border-radius: 0px;
+  background-color: #6D28D9;     
+  color: #0F0E17;
+  font-weight: bold;
 }

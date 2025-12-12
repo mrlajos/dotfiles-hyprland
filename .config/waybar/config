@@ -87,7 +87,7 @@
   "format": " ",
   "tooltip": true,
   "tooltip-format": "Open App Search",
-  "on-click": "wofi --show drun --prompt \"Search\" --width 400 --allow-images --style ~/.config/wofi/menu.css",
+  "on-click": "wofi --show drun -a --prompt \"Search\" --width 400 --allow-images --style \"$HOME/.config/wofi/menu.css\"",
   "interval": 0,
   "return-type": "string"
   },
