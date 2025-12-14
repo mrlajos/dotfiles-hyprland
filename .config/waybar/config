@@ -29,7 +29,7 @@
     "format": " {:%H:%M  %Y.%m.%d}",
     "on-click": "xdg-open https://calendar.google.com",
     "tooltip": true,
-    "tooltip-format": "Open Google Calendar"
+    "tooltip-format": "Google Calendar"
   },
 
   "network": {
@@ -86,9 +86,8 @@
   "custom/arch-menu": {
   "format": " ",
   "tooltip": true,
-  "tooltip-format": "Open App Search",
-  "on-click": "wofi --show drun -a --prompt \"Search\" --width 400 --allow-images --style \"$HOME/.config/wofi/menu.css\"",
-  "interval": 0,
+  "tooltip-format": "App Search",
+  "on-click": "wofi --show drun --allow-images --prompt \"Search...\" --width 400 --height 450 --style \"$HOME/.config/waybar/app-menu.css\"",
   "return-type": "string"
   },
 
@@ -96,10 +95,11 @@
     "format": "",
     "tooltip": true,
     "tooltip-format": "Power menu",
-    "on-click": "~/.config/waybar/scripts/power-menu.sh"
+    "on-click": "$HOME/.config/waybar/power-menu.sh"
   },
 
   "tray": {
     "spacing": 8
   }
 }
+

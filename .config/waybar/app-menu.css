@@ -1,0 +1,68 @@
+/* ===== Wofi Apps Menu ===== */
+
+/* Base window */
+window {
+  margin: 0;
+  background-color: #0B1224;
+  border: 1px solid #2E5BFF;   /* bluish border */
+  border-radius: 12px;
+}
+
+/* Search input */
+#input {
+  margin: 10px;
+  padding: 10px 12px;
+  background-color: #0A1022;
+  color: #EAF0FF;
+  border: 1px solid #2447C6;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#input:focus {
+  border-color: #4F8CFF;
+  box-shadow: 0 0 0 2px rgba(79, 140, 255, 0.25);
+}
+
+/* Layout containers */
+#outer-box {
+  padding: 12px;
+  background-color: #0B1224;
+}
+
+#inner-box {
+  background-color: #0C1530;
+}
+
+#scroll {
+  background-color: #0D1833;
+}
+
+/* Entries */
+#entry {
+  padding: 9px 10px;
+  margin: 4px 0;
+  background-color: #0E1A36;
+  color: #EAF0FF;
+  border-radius: 10px;
+  border: 1px solid rgba(79, 140, 255, 0.10);
+}
+
+#entry:selected {
+  background-color: #2E5BFF;          /* selection blue */
+  border: 1px solid rgba(234, 240, 255, 0.20);
+  color: #FFFFFF;                     /* selected text white */
+}
+
+/* Image + text */
+#img {
+  margin-right: 10px;
+}
+
+#text {
+  color: #EAF0FF;
+}
+
+#entry:selected #text {
+  color: #FFFFFF;                     /* keep selected text white */
+}
